@@ -13,8 +13,8 @@ public class MainActivity extends BaseActivity implements  MainActivityView {
     @Inject
     MainActivityPresenter presenter;
 
-    LoginFragment login = new LoginFragment();
-
+    @Inject
+    LoginFragment login;
    // @Inject
     HomeFragment home;
 

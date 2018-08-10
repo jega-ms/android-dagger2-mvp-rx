@@ -19,10 +19,10 @@ public class LoginFragment extends BaseFragment implements LoginView {
     @Inject
     LoginPresenter presenter;
 
-//    @Inject
-//    public LoginFragment() {
-//
-//    }
+    @Inject
+    public LoginFragment() {
+
+    }
 
     @Override
     public void onSuccess() {
