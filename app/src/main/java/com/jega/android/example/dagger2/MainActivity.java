@@ -13,10 +13,8 @@ public class MainActivity extends BaseActivity implements  MainActivityView {
     @Inject
     MainActivityPresenter presenter;
 
-    @Inject
-    LoginFragment login;
-   // @Inject
-    HomeFragment home;
+    LoginFragment login = new LoginFragment();
+    HomeFragment home = new HomeFragment();
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {

@@ -30,7 +30,7 @@ public abstract class BaseActivity extends AppCompatActivity implements HasSuppo
         return fragmentInjector;
     }
 
-    protected void show(BaseFragment fragment) {
+    public void show(BaseFragment fragment) {
         FragmentTransaction fragmentTransaction = getSupportFragmentManager().beginTransaction();
         fragmentTransaction.replace(getContainerId(), fragment).addToBackStack(null).commit();
     }

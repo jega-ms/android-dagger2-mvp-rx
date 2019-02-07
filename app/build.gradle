@@ -29,8 +29,8 @@ dependencies {
     androidTestImplementation 'com.android.support.test.espresso:espresso-core:3.0.2'
 
     //Dagger 2
-    api 'com.google.dagger:dagger-android:2.16'
-    api 'com.google.dagger:dagger-android-support:2.16'
-    annotationProcessor 'com.google.dagger:dagger-android-processor:2.16'
-    annotationProcessor 'com.google.dagger:dagger-compiler:2.16'
+    api 'com.google.dagger:dagger-android:2.19'
+    api 'com.google.dagger:dagger-android-support:2.19'
+    annotationProcessor 'com.google.dagger:dagger-android-processor:2.19'
+    annotationProcessor 'com.google.dagger:dagger-compiler:2.19'
 }

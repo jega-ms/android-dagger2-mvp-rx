@@ -6,9 +6,12 @@ import android.support.annotation.Nullable;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.Button;
 
 import com.jega.android.example.dagger2.R;
+import com.jega.android.example.dagger2.common.BaseActivity;
 import com.jega.android.example.dagger2.common.BaseFragment;
+import com.jega.android.example.dagger2.login.LoginFragment;
 
 import javax.inject.Inject;
 
@@ -18,14 +21,10 @@ public class HomeFragment extends BaseFragment implements HomeView {
     @Inject
     HomePresenter homePresenter;
 
-    @Inject
-    public HomeFragment() {
-
-    }
 
     @Override
     public void onSuccess() {
-
+        ((BaseActivity) getActivity()).show(new LoginFragment());
     }
 
     @Nullable
@@ -39,6 +38,13 @@ public class HomeFragment extends BaseFragment implements HomeView {
     @Override
     public void onViewCreated(@NonNull View view, @Nullable Bundle savedInstanceState) {
         super.onViewCreated(view, savedInstanceState);
-        homePresenter.logout();
+
+        Button logout = view.findViewById(R.id.logout);
+        logout.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                homePresenter.logout();
+            }
+        });
     }
 }

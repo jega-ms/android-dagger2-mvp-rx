@@ -1,8 +1,23 @@
 package com.jega.android.example.dagger2.home;
 
-public interface HomePresenter {
+import com.jega.android.example.dagger2.account.AccountManager;
 
-    void onSuccess();
+import javax.inject.Inject;
 
-    void logout();
+public class HomePresenter {
+
+    private AccountManager accountManager;
+    private HomeView callback;
+
+    @Inject
+    public HomePresenter(AccountManager accountManager, HomeView callback) {
+        this.accountManager = accountManager;
+        this.callback = callback;
+
+    }
+
+    public void logout() {
+        accountManager.logout();
+        callback.onSuccess();
+    }
 }
