@@ -8,9 +8,9 @@ import javax.inject.Inject;
 import dagger.android.AndroidInjector;
 import dagger.android.DispatchingAndroidInjector;
 import dagger.android.support.AndroidSupportInjection;
-import dagger.android.support.HasSupportFragmentInjector;
+import dagger.android.support.DaggerFragment;
 
-public class BaseFragment extends Fragment implements HasSupportFragmentInjector {
+public class BaseFragment extends DaggerFragment {
 
     @Inject
     DispatchingAndroidInjector<Fragment> supportFragmentInjector;
